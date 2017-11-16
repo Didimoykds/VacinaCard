@@ -15,7 +15,7 @@
   </li>
   <li>
     Second!
-    <p>Do a git clone to create the project on your folder: <pre>git clone https://github.com/ajaxtechbsb/veritas-front-desktop.git</pre> </p>
+    <p>Do a git clone to create the project on your folder: <pre>git clone https://github.com/ajaxtechbsb/https://github.com/Didimoykds/VacinaCard.git</pre> </p>
   </li>
   <li>
     Third!
