@@ -11,7 +11,7 @@
 <ol>
   <li>
     First!
-    <p>You need to have PHP 5.6~7.1 installed and Composer</p>
+    <p>You need to have PHP 5.6~7.1 and Composer installed</p>
   </li>
   <li>
     Second!
