@@ -18,6 +18,7 @@ class CreateCallsTable extends Migration {
 			$table->string('title', 45);
 			$table->string('description', 200);
 			$table->integer('fk_user')->index('fk_calls_user1_idx');
+			$table->timestamps();
 		});
 	}
 

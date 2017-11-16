@@ -18,6 +18,7 @@ class CreateVaccinesTable extends Migration {
 			$table->string('name', 45);
 			$table->string('description', 100);
 			$table->string('recurrence', 10);
+			$table->timestamps();
 		});
 	}
 
