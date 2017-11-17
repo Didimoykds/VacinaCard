@@ -17,7 +17,7 @@ class CreateSchedulesTable extends Migration {
 			$table->integer('id', true);
 			$table->date('schedule_date')->nullable();
 			$table->string('local', 45);
-			$table->date('vaccination_day');
+			$table->date('vaccination_day')->nullable();
 			$table->string('batch', 45)->nullable();
 			$table->string('observation', 45)->nullable();
 			$table->enum('status', array('concluida','nao_concluida'))->nullable();

@@ -1,10 +1,10 @@
-<form method="post">
+<form method="post" id="vacinaTomada">
     <div class="panel panel-default">
         <div class="panel-heading text-center"><b>Cartão de Vacina</b></div>
         <div class="panel-body">
             <h2 class="text-center">Tabela de Vacinas</h2>
             <div class="panel-body">
-                <div class="col-md-12">
+                <div class="col-md-12" style="max-height:250px;overflow-y:scroll;">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -54,8 +54,8 @@
                                 <input type="text" id="batch" class="form-control" name="batch" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="batch" class="control-label">Observação</label>
-                                <input type="text" id="batch" class="form-control" name="observation" required>
+                                <label for="observation" class="control-label">Observação</label>
+                                <input type="text" id="observation" class="form-control" name="observation" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="dataVacina" class="control-label">Data da Vacina</label>
