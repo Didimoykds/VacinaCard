@@ -13,6 +13,7 @@
                                 <th>Lote</th>
                                 <th>Local</th>
                                 <th>Recorrência</th>
+                                <th>Observação</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -24,6 +25,7 @@
                                         <td>{{$vacinaCard['batch']}}</td>
                                         <td>{{$vacinaCard['local']}}</td>
                                         <td>{{$vacinaCard['recurrence']}}</td>
+                                        <td>{{$vacinaCard['observation']}}</td>
                                     </tr>
                                 @endforeach
                             @endif

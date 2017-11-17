@@ -11,12 +11,19 @@
         alert('Agendado com sucesso!');
     </script>
 @endif
+@if( null !== session('saveOrderVacina'))
+    <script>
+        alert('Vacina salva com sucesso!');
+    </script>
+@endif
+
 <div class="tab-content">
     <div class="container">
         <div class="panel panel-default" style="padding:0px">
             <ul class="nav nav-pills">
                 <li class="active"><a data-toggle="pill" href="#vacinas">Cartão de Vacina</a></li>
                 <li><a data-toggle="pill" href="#agendamento">Agendamento</a></li>
+                <li><a data-toggle="pill" href="#vacina">Cadastrar Vacina</a></li>
             </ul>
         </div>
         <div class="panel panel-default" style="padding:0px">
@@ -26,6 +33,9 @@
                 </div>
                 <div id="agendamento" class="tab-pane fade">
                     @include('app.agendamento_vacina')
+                </div>
+                <div id="vacina" class="tab-pane fade">
+                    @include('app.cadastro_vacina')
                 </div>
             </div>
         </div>

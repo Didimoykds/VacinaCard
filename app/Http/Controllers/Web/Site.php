@@ -41,6 +41,7 @@ class Site extends Controller
 
             $vacinaCards[] = [
                 'vaccination_day' => $schedule['vaccination_day'],
+                'observation' => $schedule['observation'],
                 'local' => $schedule['local'],
                 'batch' => $schedule['batch'],
                 'vaccine_name' => $vaccine[0]['name'],
@@ -95,6 +96,14 @@ class Site extends Controller
         ]);
     }
 
+    private function createVaccine(array $data)
+    {
+        return Vaccine::make([
+            'name' => $data['name'],
+            'description' => $data['description'],
+            'recurrence' => $data['recurrence']
+        ]);
+    }
 
     public function registerProcess(Request $request)
     {
@@ -104,15 +113,19 @@ class Site extends Controller
             $schedule->save();
             return Redirect::back()->with('saveOrderCartao', true);
         } elseif ($form['form_name'] == 'agendarVacina'){
-            $schedule = $this->createVacineSchedule($form);
+            $schedule = $this->createVaccineSchedule($form);
             $schedule->save();
             return Redirect::back()->with('saveOrderAgenda', true);
+        } elseif ($form['form_name'] == 'cadastrarVacina') {
+            $vaccine = $this->createVaccine($form);
+            $vaccine->save();
+            return Redirect::back()->with('saveOrderVacina', true);
         }
     }
 
     public function index ()
     {
-        return View::make('app\menu', array(
+        return View::make('app/menu', array(
              'vacinaCards' => $this->createViewVaccineCard($this->getDoneSchedules()),
              'scheduleCards' => $this->createViewScheduleCard($this->getSchedules()),
              'vaccines' => $this->getVaccines()
