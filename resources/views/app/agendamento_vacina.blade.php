@@ -1,29 +1,27 @@
 <form method="post">
     <div class="panel panel-default">
-        <div class="panel-heading text-center"><b>Agendamento de Vacina</b></div>
+        <div class="panel-heading text-center"><b>Cartão de Vacina</b></div>
         <div class="panel-body">
-            <h2 class="text-center">Agenda de Vacinas</h2>
+            <h2 class="text-center">Tabela de Vacinas</h2>
             <div class="panel-body">
                 <div class="col-md-12" style="max-height:250px;overflow-y:scroll;">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Data da Vacina</th>
+                                <th>Data Marcada</th>
                                 <th>Vacina</th>
-                                <th>Lote</th>
                                 <th>Local</th>
-                                <th>Recorrência</th>
+                                <th>Observação</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @if(isset($vacinaCards))
-                                @foreach($vacinaCards as $vacinaCard)
+                            @if(isset($scheduleCards))
+                                @foreach($scheduleCards as $scheduleCard)
                                     <tr>
-                                        <td>{{$vacinaCard['vaccination_day']}}</td>
-                                        <td>{{$vacinaCard['vaccine_name']}}</td>
-                                        <td>{{$vacinaCard['batch']}}</td>
-                                        <td>{{$vacinaCard['local']}}</td>
-                                        <td>{{$vacinaCard['recurrence']}}</td>
+                                        <td>{{$scheduleCard['schedule_date']}}</td>
+                                        <td>{{$scheduleCard['vaccine_name']}}</td>
+                                        <td>{{$scheduleCard['local']}}</td>
+                                        <td>{{$scheduleCard['observation']}}</td>
                                     </tr>
                                 @endforeach
                             @endif
@@ -31,11 +29,11 @@
                     </table>
                 </div>
                 <hr/>
-
                 <div class="form-horizontal">
                     <form method="POST" action="{{route('menu')}}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" >
-                        <input type="hidden" name="form_name" value="vacinaTomada" />
+                        <input type="hidden" name="form_name" value="agendarVacina" />
+
                         <input type="hidden" name="user_id" value="{{Auth::user()->id}}" />
                         <div class="col-md-12">
                             <div class="col-md-6">
@@ -51,16 +49,12 @@
                                 <input type="text" id="local" class="form-control" name="local" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="batch" class="control-label">Lote</label>
-                                <input type="text" id="batch" class="form-control" name="batch" required>
-                            </div>
-                            <div class="col-md-6">
                                 <label for="observation" class="control-label">Observação</label>
                                 <input type="text" id="observation" class="form-control" name="observation" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="dataVacina" class="control-label">Data da Vacina</label>
-                                <input type="date" id="dataVacina" class="form-control" name="vaccination_day" required>
+                                <input type="date" id="dataVacina" class="form-control" name="schedule_date" required>
                             </div>
                             <div class="col-md-6 col-md-offset-3" style="margin-top:20px;">
                                 <input type="submit" class="form-control btn btn-primary" value="Cadastrar"/>

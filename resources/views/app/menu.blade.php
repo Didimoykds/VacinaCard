@@ -1,9 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-@if( null !== session('saveOrder'))
+@if( null !== session('saveOrderCartao'))
     <script>
         alert('Salvo com sucesso!');
+    </script>
+@endif
+@if( null !== session('saveOrderAgenda'))
+    <script>
+        alert('Agendado com sucesso!');
     </script>
 @endif
 <div class="tab-content">
@@ -20,8 +25,7 @@
                     @include('app.cartao_vacina')
                 </div>
                 <div id="agendamento" class="tab-pane fade">
-                    <h3>Menu 2</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    @include('app.agendamento_vacina')
                 </div>
             </div>
         </div>
