@@ -16,6 +16,16 @@
         alert('Vacina salva com sucesso!');
     </script>
 @endif
+@if( null !== session('scheduleDeleteOrder'))
+    <script>
+        alert('Agendamento deletado!');
+    </script>
+@endif
+@if( null !== session('scheduleUpdateOrder'))
+    <script>
+        alert('Agendamento Completado!');
+    </script>
+@endif
 
 <div class="tab-content">
     <div class="container">

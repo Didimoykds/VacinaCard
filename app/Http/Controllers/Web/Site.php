@@ -40,6 +40,7 @@ class Site extends Controller
             $vaccine = Vaccine::where('id', '=', $schedule['fk_vaccine'])->get()->toArray();
 
             $vacinaCards[] = [
+                'id' => $schedule['id'],
                 'vaccination_day' => $schedule['vaccination_day'],
                 'observation' => $schedule['observation'],
                 'local' => $schedule['local'],
@@ -59,6 +60,7 @@ class Site extends Controller
             $vaccine = Vaccine::where('id', '=', $data['fk_vaccine'])->get()->toArray();
 
             $scheduleCard[] = [
+                'id' => $data['id'],
                 'schedule_date' => $data['schedule_date'],
                 'vaccine_name' => $vaccine[0]['name'],
                 'local' => $data['local'],
@@ -122,7 +124,10 @@ class Site extends Controller
             return Redirect::back()->with('saveOrderVacina', true);
         }
     }
-
+    public function destroyProccess($id)
+    {
+        Vaccine::delete($id);
+    }
     public function index ()
     {
         return View::make('app/menu', array(
