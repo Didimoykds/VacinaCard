@@ -15,14 +15,15 @@ class CreateSchedulesTable extends Migration {
 		Schema::create('schedules', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->date('schedule_date');
+			$table->date('schedule_date')->nullable();
 			$table->string('local', 45);
-			$table->timestamp('vaccination_day')->default(DB::raw('CURRENT_TIMESTAMP'));
+			$table->date('vaccination_day')->nullable();
 			$table->string('batch', 45)->nullable();
 			$table->string('observation', 45)->nullable();
-			$table->enum('status', array('atrasada','concluida','nao_concluida'))->nullable();
+			$table->enum('status', array('concluida','nao_concluida'))->nullable();
 			$table->integer('fk_user')->index('fk_schedules_user1_idx');
 			$table->integer('fk_vaccine')->index('fk_schedules_vaciana1_idx');
+			$table->timestamps();
 		});
 	}
 

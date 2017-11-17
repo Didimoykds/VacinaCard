@@ -21,11 +21,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>'auth', 'prefix' => 'user'], function(){
     Route::get('/menu', 'Web\Site@index')->name('menu');
+
+    Route::post('/menu', 'Web\Site@registerProcess');
+
     Route::get('/settings', function (){
         header("Refresh:1, menu");
         return "Ainda não existe!";
     })->name('settings');
-    // Route::get('/abastecimento')
 });
 
 Auth::routes();
