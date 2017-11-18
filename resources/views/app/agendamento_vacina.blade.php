@@ -22,6 +22,30 @@
                                         <td>{{$scheduleCard['vaccine_name']}}</td>
                                         <td>{{$scheduleCard['local']}}</td>
                                         <td>{{$scheduleCard['observation']}}</td>
+                                        <td>
+                                            <form method="POST">
+                                                <input type="hidden" name="_method" value="DELETE" >
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}" >
+                                                <input type="hidden" name="id" value = "{{$scheduleCard['id']}}">
+                                                <input type="hidden" name="form_type" value = "deleteSchedule">
+                                                <input
+                                                    onclick="return confirm('Você tem certeza que quer deletar esse agendamento?');"
+                                                    class="btn btn-danger"
+                                                    value="Deletar"
+                                                    style="cursor: pointer;"
+                                                    type="submit"
+                                                >
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <form method="POST">
+                                                <input type="hidden" name="_method" value="PUT" >
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}" >
+                                                <input type="hidden" name="id" value = "{{$scheduleCard['id']}}">
+                                                <input type="hidden" name="form_type" value = "updateSchedule">
+                                                <input class="btn btn-success" value="Confirmar" style="cursor: pointer;" type="submit" >
+                                            </form>
+                                        </td>
                                     </tr>
                                 @endforeach
                             @endif

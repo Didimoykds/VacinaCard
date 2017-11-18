@@ -13,6 +13,7 @@
                                 <th>Lote</th>
                                 <th>Local</th>
                                 <th>Recorrência</th>
+                                <th>Observação</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -24,6 +25,23 @@
                                         <td>{{$vacinaCard['batch']}}</td>
                                         <td>{{$vacinaCard['local']}}</td>
                                         <td>{{$vacinaCard['recurrence']}}</td>
+                                        <td>{{$vacinaCard['observation']}}</td>
+                                        <td>
+                                            <form method="POST">
+                                                <input type="hidden" name="_method" value="DELETE" >
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}" >
+                                                <input type="hidden" name="id" value = "{{$vacinaCard['id']}}">
+                                                <input type="hidden" name="form_type" value = "deleteSchedule">
+
+                                                <input
+                                                    onclick="return confirm('Você tem certeza que quer deletar essa vacina?');"
+                                                    class="btn btn-danger"
+                                                    style="cursor: pointer;"
+                                                    value="Deletar"
+                                                    type="submit"
+                                                >
+                                            </form>
+                                        </td>
                                     </tr>
                                 @endforeach
                             @endif

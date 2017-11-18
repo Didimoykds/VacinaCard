@@ -48,8 +48,12 @@
     }
     @media (max-width : 768px)
     {
-        #logo-img{
+        /*#logo-img{
             display:none;
+        }*/
+        #logo-img{
+            max-width: 80px;
+            height: auto;
         }
         #user2{
             display:none;

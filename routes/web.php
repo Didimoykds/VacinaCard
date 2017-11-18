@@ -24,6 +24,10 @@ Route::group(['middleware'=>'auth', 'prefix' => 'user'], function(){
 
     Route::post('/menu', 'Web\Site@registerProcess');
 
+    Route::delete('/menu', 'Web\SiteDelete@deleteProcess');
+
+    Route::put('/menu', 'Web\SiteUpdate@updateProccess');
+    
     Route::get('/settings', function (){
         header("Refresh:1, menu");
         return "Ainda não existe!";
