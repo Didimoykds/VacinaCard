@@ -1,8 +1,7 @@
 <form method="post">
     <div class="panel panel-default">
-        <div class="panel-heading text-center"><b>Agendamento de Vacina</b></div>
         <div class="panel-body">
-            <h2 class="text-center">Agenda de Vacinas</h2>
+            <h2 class="text-center">Cartão de Vacina</h2>
             <div class="panel-body">
                 <div class="col-md-12" style="max-height:250px;overflow-y:scroll;">
                     <table class="table table-striped">

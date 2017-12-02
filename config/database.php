@@ -60,7 +60,7 @@ return [
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'password' => env('DB_password', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
@@ -73,7 +73,7 @@ return [
             'port' => env('DB_PORT', '1433'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'password' => env('DB_password', ''),
             'charset' => 'utf8',
             'prefix' => '',
         ],
@@ -110,7 +110,7 @@ return [
 
         'default' => [
             'host' => env('REDIS_HOST', '127.0.0.1'),
-            'password' => env('REDIS_PASSWORD', null),
+            'password' => env('REDIS_password', null),
             'port' => env('REDIS_PORT', 6379),
             'database' => 0,
         ],

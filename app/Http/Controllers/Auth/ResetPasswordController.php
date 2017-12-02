@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Foundation\Auth\Resetspasswords;
 
-class ResetPasswordController extends Controller
+class ResetpasswordController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Controller
+    | password Reset Controller
     |--------------------------------------------------------------------------
     |
     | This controller is responsible for handling password reset requests
@@ -18,7 +18,7 @@ class ResetPasswordController extends Controller
     |
     */
 
-    use ResetsPasswords;
+    use Resetspasswords;
 
     /**
      * Where to redirect users after resetting their password.

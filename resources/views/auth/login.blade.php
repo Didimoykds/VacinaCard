@@ -24,7 +24,7 @@
                             <div class="col-md-12">
                                 <div class="col-md-6 col-md-offset-3 input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
-                                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
+                                    <input id="password" type="password" class="form-control" name="password" placeholder="Senha" required>
                                 </div>
                                 <div class="col-md-12">
                                     @if ($errors->has('password'))

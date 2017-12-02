@@ -54,7 +54,7 @@ return [
             'persistent_id' => env('MEMCACHED_PERSISTENT_ID'),
             'sasl' => [
                 env('MEMCACHED_USERNAME'),
-                env('MEMCACHED_PASSWORD'),
+                env('MEMCACHED_password'),
             ],
             'options' => [
                 // Memcached::OPT_CONNECT_TIMEOUT  => 2000,

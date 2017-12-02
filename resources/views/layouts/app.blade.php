@@ -136,13 +136,13 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li class="text-center">
-                                        <a href="{{ route('settings') }}"><i class="fa fa-cog" aria-hidden="true"></i>  Settings</a>
+                                        <a href="{{ route('settings') }}"><i class="fa fa-cog" aria-hidden="true"></i>  Configurações</a>
                                     </li>
                                     <li class="text-center">
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            <b><i class="fa fa-sign-out" aria-hidden="true"></i>  Logout</b>
+                                            <b><i class="fa fa-sign-out" aria-hidden="true"></i>  Sair</b>
                                         </a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}

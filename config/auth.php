@@ -78,7 +78,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Resetting Passwords
+    | Resetting passwords
     |--------------------------------------------------------------------------
     |
     | You may specify multiple password reset configurations if you have more
