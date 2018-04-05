@@ -48,13 +48,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'nome' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'cellphone' => 'required|string|min:11|max:13|unique:users',
-            'telephone' => 'required|string|min:10|max:12',
-            'password' => 'required|string|min:6|confirmed',
-            'birthday' => 'required|date',
-            'gender' => 'required|in:m,f',
+            'celular' => 'required|string|min:11|max:11|unique:users',
+            'telefone' => 'required|string|min:10|max:10',
+            'senha' => 'required|string|min:6|confirmed',
+            'dataNasc' => 'required|date',
+            'genero' => 'required|in:m,f',
             'cpf' => 'required|string|min:11|max:13'
         ]);
     }
@@ -67,14 +67,14 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'cellphone' => $data['cellphone'],
+            'nome' => $data['nome'],
+            'celular' => $data['cellphone'],
             'email' => $data['email'],
-            'telephone' => $data['telephone'],
-            'cellphone' => $data['cellphone'],
+            'telefone' => $data['telefone'],
+            'celular' => $data['celular'],
             'cpf' => $data['cpf'],
-            'birthday' => $data['birthday'],
-            'password' => bcrypt($data['password']),
+            'dataNasc' => $data['dataNasc'],
+            'senha' => bcrypt($data['senha']),
         ]);
     }
 }

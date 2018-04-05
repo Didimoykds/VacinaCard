@@ -17,9 +17,9 @@ class CreateUsersTable extends Migration
           $table->integer('id', true);
           $table->string('nome', 45);
           $table->string('email')->unique();
-          $table->string('cpf', 11)->unsigned()->nullable();
-    			$table->string('telefone', 10)->unsigned()->nullable();
-    			$table->string('celular', 11)->unsigned();
+          $table->string('cpf', 11)->nullable();
+    			$table->string('telefone', 10)->nullable();
+    			$table->string('celular', 11);
           $table->date('dataNasc');
           $table->enum('genero', array('m','f'));
           $table->string('senha');

@@ -20,7 +20,7 @@
                                         <td>{{$scheduleCard['dataMarcada']}}</td>
                                         <td>{{$scheduleCard['nomeVacina']}}</td>
                                         <td>{{$scheduleCard['local']}}</td>
-                                        <td>{{$scheduleCard['observação']}}</td>
+                                        <td>{{$scheduleCard['observacao']}}</td>
                                         <td>
                                             <form method="POST">
                                                 <input type="hidden" name="_method" value="DELETE" >
@@ -63,7 +63,7 @@
                                 <label for="vaccine" class="control-label">Vacina</label>
                                 <select class="form-control" id="vaccine" name="fk_vaccine">
                                     @foreach($vaccines as $vaccine)
-                                        <option value="{{$vaccine['id']}}">{{$vaccine['name']}}</option>
+                                        <option value="{{$vaccine['id']}}">{{$vaccine['nome']}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -73,11 +73,11 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="observation" class="control-label">Observação</label>
-                                <input type="text" id="observation" class="form-control" name="observation" required>
+                                <input type="text" id="observation" class="form-control" name="observacao" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="dataVacina" class="control-label">Data da Vacina</label>
-                                <input type="date" id="dataVacina" class="form-control" name="schedule_date" required>
+                                <input type="date" id="dataVacina" class="form-control" name="dataMarcada" required>
                             </div>
                             <div class="col-md-6 col-md-offset-3" style="margin-top:20px;">
                                 <input type="submit" class="form-control btn btn-primary" value="Cadastrar"/>

@@ -11,15 +11,15 @@
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('nome') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Nome</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="nome" value="{{ old('nome') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('nome'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('nome') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -56,28 +56,28 @@
                             <label for="birthday" class="col-md-4 control-label">Data de Nascimento</label>
 
                             <div class="col-md-6">
-                                <input id="birthday" type="date" class="form-control" name="birthday" required>
+                                <input id="birthday" type="date" class="form-control" name="dataNasc" required>
 
-                                @if ($errors->has('birthday'))
+                                @if ($errors->has('dataNasc'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('birthday') }}</strong>
+                                        <strong>{{ $errors->first('dataNasc') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('genero') ? ' has-error' : '' }}">
                             <label for="gender" class="col-md-4 control-label">Gênero</label>
 
                             <div class="col-md-6">
-                                <select id="gender" type="date" class="form-control" name="gender" required>
+                                <select id="gender" type="date" class="form-control" name="genero" required>
                                     <option value="m">Masculino</option>
                                     <option value="f">Feminino</option>
                                 </select>
 
-                                @if ($errors->has('gender'))
+                                @if ($errors->has('genero'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('gender') }}</strong>
+                                        <strong>{{ $errors->first('genero') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -87,10 +87,10 @@
                             <label for="telephone" class="col-md-4 control-label">Telefone-Fixo</label>
 
                             <div class="col-md-6">
-                              <input id="telephone" type="tel" class="form-control" name="telephone" value="{{ old('telephone')}}" required>
-                                @if ($errors->has('telephone'))
+                              <input id="telephone" type="tel" class="form-control" name="telefone" value="{{ old('telefone')}}" required>
+                                @if ($errors->has('telefone'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('telephone') }}</strong>
+                                        <strong>{{ $errors->first('telefone') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -100,10 +100,10 @@
                             <label for="cellphone" class="col-md-4 control-label">Celular</label>
 
                             <div class="col-md-6">
-                              <input id="cellphone" type="tel" class="form-control" name="cellphone" value="{{ old('cellphone')}}" required>
+                              <input id="cellphone" type="tel" class="form-control" name="celular" value="{{ old('celular')}}" required>
                                 @if ($errors->has('cellphone'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('cellphone') }}</strong>
+                                        <strong>{{ $errors->first('celular') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -113,11 +113,11 @@
                             <label for="password" class="col-md-4 control-label">Senha</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                <input id="password" type="password" class="form-control" name="senha" required>
 
-                                @if ($errors->has('password'))
+                                @if ($errors->has('senha'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{{ $errors->first('senha') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -127,7 +127,7 @@
                             <label for="password-confirm" class="col-md-4 control-label">Confirme sua Senha</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" name="senha_confirmation" required>
                             </div>
                         </div>
 
