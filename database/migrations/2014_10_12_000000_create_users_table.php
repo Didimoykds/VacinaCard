@@ -15,22 +15,19 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
                 $table->integer('id', true);
-                $table->string('name', 45);
+                $table->string('nome', 45);
                 $table->string('email')->unique();
-                $table->bigInteger('cpf')->unsigned()->nullable();
-    			$table->bigInteger('telephone')->unsigned()->nullable();
-    			$table->bigInteger('cellphone')->unsigned();
-                $table->date('birthday');
-                $table->enum('gender', array('m','f'));
-                $table->string('password');
-                $table->enum('profile', array('1','2'))->nullable()->default('1');
+                $table->string('cpf', 11)->unsigned()->nullable();
+    			$table->string('telefone', 10)->unsigned()->nullable();
+    			$table->string('celular', 11)->unsigned();
+                $table->date('dataNasc');
+                $table->enum('genero', array('m','f'));
+                $table->string('senha');
+                $table->enum('perfil', array('administrador','usuario'))->nullable()->default('usuario');
                 $table->rememberToken();
                 $table->timestamps();
         });
-
-        DB::statement('ALTER TABLE users CHANGE cpf cpf BIGINT(11) UNSIGNED ZEROFILL');
-        DB::statement('ALTER TABLE users CHANGE telephone telephone BIGINT(10) UNSIGNED ZEROFILL');
-        DB::statement('ALTER TABLE users CHANGE cellphone cellphone BIGINT(11) UNSIGNED ZEROFILL NOT NULL');
+        
     }
 
     /**
