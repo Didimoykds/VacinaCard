@@ -52,7 +52,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'celular' => 'required|string|min:11|max:11|unique:users',
             'telefone' => 'required|string|min:10|max:10',
-            'senha' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6|confirmed',
             'dataNasc' => 'required|date',
             'genero' => 'required|in:m,f',
             'cpf' => 'required|string|min:11|max:13'
@@ -74,7 +74,7 @@ class RegisterController extends Controller
             'celular' => $data['celular'],
             'cpf' => $data['cpf'],
             'dataNasc' => $data['dataNasc'],
-            'senha' => bcrypt($data['senha']),
+            'password' => bcrypt($data['password']),
         ]);
     }
 }

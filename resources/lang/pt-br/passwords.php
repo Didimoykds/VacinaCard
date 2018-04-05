@@ -14,8 +14,8 @@ return [
     */
 
     'password' => 'Senhas precisam ter pelo menos 6 caracteres!',
-    'reset' => 'Sua senha foi resetada!',
-    'sent' => 'Enviamos um E-mail com o link para trocar de senha!',
+    'reset' => 'Sua password foi resetada!',
+    'sent' => 'Enviamos um E-mail com o link para trocar de password!',
     'token' => 'Este token est&aacute; inválido.',
     'user' => "N&atilde;o conseguimos achar um usu&aacute;rio com esse e-mail.",
 

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nome', 'email', 'senha','celular','telefone','cpf','dataNasc',
+        'nome', 'email', 'password','celular','telefone','cpf','dataNasc',
     ];
     /**
      * The attributes that should be hidden for arrays.
@@ -23,11 +23,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'senha', 'remember_token',
+        'password', 'remember_token',
     ];
 
-    public function getAuthPassword()
-    {
-       return $this->senha;
-    }
 }

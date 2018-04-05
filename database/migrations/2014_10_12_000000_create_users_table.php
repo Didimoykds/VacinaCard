@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
     			$table->string('celular', 11);
           $table->date('dataNasc');
           $table->enum('genero', array('m','f'));
-          $table->string('senha');
+          $table->string('password');
           $table->enum('perfil', array('administrador','usuario'))->nullable()->default('usuario');
           $table->rememberToken();
           $table->timestamps();

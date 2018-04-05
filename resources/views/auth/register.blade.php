@@ -52,7 +52,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('dataNasc') ? ' has-error' : '' }}">
                             <label for="birthday" class="col-md-4 control-label">Data de Nascimento</label>
 
                             <div class="col-md-6">
@@ -83,11 +83,11 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}">
-                            <label for="telephone" class="col-md-4 control-label">Telefone-Fixo</label>
+                        <div class="form-group{{ $errors->has('telefone') ? ' has-error' : '' }}">
+                            <label for="telefone" class="col-md-4 control-label">Telefone-Fixo</label>
 
                             <div class="col-md-6">
-                              <input id="telephone" type="tel" class="form-control" name="telefone" value="{{ old('telefone')}}" required>
+                              <input id="telefone" type="tel" class="form-control" name="celular" value="{{ old('telefone')}}" required>
                                 @if ($errors->has('telefone'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('telefone') }}</strong>
@@ -96,12 +96,12 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('cellphone') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('celular') ? ' has-error' : '' }}">
                             <label for="cellphone" class="col-md-4 control-label">Celular</label>
 
                             <div class="col-md-6">
                               <input id="cellphone" type="tel" class="form-control" name="celular" value="{{ old('celular')}}" required>
-                                @if ($errors->has('cellphone'))
+                                @if ($errors->has('celular'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('celular') }}</strong>
                                     </span>
@@ -113,11 +113,11 @@
                             <label for="password" class="col-md-4 control-label">Senha</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="senha" required>
+                                <input id="password" type="password" class="form-control" name="password" required>
 
-                                @if ($errors->has('senha'))
+                                @if ($errors->has('password'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('senha') }}</strong>
+                                        <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -127,7 +127,7 @@
                             <label for="password-confirm" class="col-md-4 control-label">Confirme sua Senha</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="senha_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
 
