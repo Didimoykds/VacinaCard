@@ -15,9 +15,9 @@ class CreateVaccinesTable extends Migration {
 		Schema::create('vaccines', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->string('name', 45);
-			$table->string('description', 100);
-			$table->string('recurrence', 10);
+			$table->string('nome', 45);
+			$table->string('descrição', 100);
+			$table->string('recorrência', 10);
 			$table->timestamps();
 		});
 	}
