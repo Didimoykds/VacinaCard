@@ -15,8 +15,8 @@ class CreateCallsTable extends Migration {
 		Schema::create('calls', function(Blueprint $table)
 		{
 			$table->integer('id', true);
-			$table->string('título', 45);
-			$table->string('descrição', 200);
+			$table->string('titulo', 45);
+			$table->string('descricao', 200);
 			$table->integer('fk_user')->index('fk_calls_user1_idx');
 			$table->timestamps();
 		});

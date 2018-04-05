@@ -17,10 +17,10 @@
                             @if(isset($scheduleCards))
                                 @foreach($scheduleCards as $scheduleCard)
                                     <tr>
-                                        <td>{{$scheduleCard['schedule_date']}}</td>
-                                        <td>{{$scheduleCard['vaccine_name']}}</td>
+                                        <td>{{$scheduleCard['dataMarcada']}}</td>
+                                        <td>{{$scheduleCard['nomeVacina']}}</td>
                                         <td>{{$scheduleCard['local']}}</td>
-                                        <td>{{$scheduleCard['observation']}}</td>
+                                        <td>{{$scheduleCard['observação']}}</td>
                                         <td>
                                             <form method="POST">
                                                 <input type="hidden" name="_method" value="DELETE" >
