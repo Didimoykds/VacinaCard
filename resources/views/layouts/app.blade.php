@@ -115,10 +115,10 @@
                     @else
                     <a id="user1" href="#" class="navbar-brand text-center">
                         <i class="fa fa-user-o" aria-hidden="true"></i>
-                        @if(substr(Auth::user()->name, 0, strpos(Auth::user()->name, ' ')))
-                            {{substr(Auth::user()->name, 0, strpos(Auth::user()->name, ' '))}}
+                        @if(substr(Auth::user()->nome, 0, strpos(Auth::user()->nome, ' ')))
+                            {{substr(Auth::user()->nome, 0, strpos(Auth::user()->nome, ' '))}}
                         @else
-                            {{Auth::user()->name}}
+                            {{Auth::user()->nome}}
                         @endif
                     </a>
                     @endguest
@@ -128,7 +128,7 @@
                     @else
                         <ul class="nav navbar-nav navbar-right logout-label">
                             <a id="user2" href="#" class="navbar-brand">
-                                <i class="fa fa-user-o" aria-hidden="true"></i> {{ Auth::user()->name }}
+                                <i class="fa fa-user-o" aria-hidden="true"></i> {{ Auth::user()->nome }}
                             </a>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown" role="button" aria-expanded="false">

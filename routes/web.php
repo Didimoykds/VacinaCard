@@ -12,6 +12,9 @@
 */
 
 Route::get('/', function () {
+    if(Auth::check()){
+      return redirect()->route('menu');
+    }
     return view('/auth/login');
 });
 
@@ -27,7 +30,7 @@ Route::group(['middleware'=>'auth', 'prefix' => 'user'], function(){
     Route::delete('/menu', 'Web\SiteDelete@deleteProcess');
 
     Route::put('/menu', 'Web\SiteUpdate@updateProccess');
-    
+
     Route::get('/settings', function (){
         header("Refresh:1, menu");
         return "Ainda não existe!";

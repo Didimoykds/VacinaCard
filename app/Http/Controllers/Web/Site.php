@@ -114,20 +114,24 @@ class Site extends Controller
             $schedule = $this->createDoneSchedule($form);
             $schedule->save();
             return Redirect::back()->with('saveOrderCartao', true);
-        } elseif ($form['form_name'] == 'agendarVacina'){
+        }
+        if ($form['form_name'] == 'agendarVacina'){
             $schedule = $this->createVaccineSchedule($form);
             $schedule->save();
             return Redirect::back()->with('saveOrderAgenda', true);
-        } elseif ($form['form_name'] == 'cadastrarVacina') {
+        }
+        if ($form['form_name'] == 'cadastrarVacina') {
             $vaccine = $this->createVaccine($form);
             $vaccine->save();
             return Redirect::back()->with('saveOrderVacina', true);
         }
     }
+
     public function destroyProccess($id)
     {
-        Vaccine::delete($id);
+        return Vaccine::delete($id);
     }
+
     public function index ()
     {
         return View::make('app/menu', array(

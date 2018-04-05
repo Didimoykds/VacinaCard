@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -19,17 +20,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('senha') ? ' has-error' : '' }}">
 
                             <div class="col-md-12">
                                 <div class="col-md-6 col-md-offset-3 input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
-                                    <input id="password" type="password" class="form-control" name="password" placeholder="Senha" required>
+                                    <input id="password" type="password" class="form-control" name="senha" placeholder="Senha" required>
                                 </div>
                                 <div class="col-md-12">
-                                    @if ($errors->has('password'))
+                                    @if ($errors->has('senha'))
                                         <span class="help-block">
-                                            <strong>{{ $errors->first('password') }}</strong>
+                                            <strong>{{ $errors->first('senha') }}</strong>
                                         </span>
                                     @endif
                                 </div>
