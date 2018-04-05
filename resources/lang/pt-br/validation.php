@@ -117,7 +117,8 @@ return [
     */
 
     'attributes' => [
-        'dataNasc' => 'data de nascimento'
+        'dataNasc' => 'data de nascimento',
+        'password' => 'senha'
     ],
 
 ];

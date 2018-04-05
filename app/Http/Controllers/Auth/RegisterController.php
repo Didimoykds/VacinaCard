@@ -51,11 +51,11 @@ class RegisterController extends Controller
             'nome' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'celular' => 'required|string|min:11|max:11|unique:users',
-            'telefone' => 'required|string|min:10|max:10',
+            'cpf' => 'string|min:11|max:11',
+            'telefone' => 'string|min:10|max:10',
             'password' => 'required|string|min:6|confirmed',
             'dataNasc' => 'required|date',
-            'genero' => 'required|in:m,f',
-            'cpf' => 'required|string|min:11|max:13'
+            'genero' => 'required|in:m,f'
         ]);
     }
     /**
@@ -66,15 +66,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'nome' => $data['nome'],
-            'celular' => $data['celular'],
-            'email' => $data['email'],
-            'telefone' => $data['telefone'],
-            'celular' => $data['celular'],
-            'cpf' => $data['cpf'],
-            'dataNasc' => $data['dataNasc'],
-            'password' => bcrypt($data['password']),
-        ]);
+        $data['password'] =  bcrypt($data['password']);
+        return User::create($data);
     }
+
+
 }

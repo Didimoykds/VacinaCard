@@ -12,7 +12,7 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('nome') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Nome</label>
+                            <label for="name" class="col-md-4 control-label">Nome <span style="color:red; font-size:1.5em;">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="nome" value="{{ old('nome') }}" required autofocus>
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail</label>
+                            <label for="email" class="col-md-4 control-label">E-Mail <span style="color:red; font-size:1.5em;">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -42,7 +42,7 @@
                             <label for="cpf" class="col-md-4 control-label">CPF</label>
 
                             <div class="col-md-6">
-                                <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}" required autofocus>
+                                <input id="cpf" type="text" class="form-control" name="cpf" value="{{ old('cpf') }}">
 
                                 @if ($errors->has('cpf'))
                                     <span class="help-block">
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('dataNasc') ? ' has-error' : '' }}">
-                            <label for="birthday" class="col-md-4 control-label">Data de Nascimento</label>
+                            <label for="birthday" class="col-md-4 control-label">Data de Nascimento <span style="color:red; font-size:1.5em;">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="birthday" type="date" class="form-control" name="dataNasc" required>
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('genero') ? ' has-error' : '' }}">
-                            <label for="gender" class="col-md-4 control-label">Gênero</label>
+                            <label for="gender" class="col-md-4 control-label">Gênero <span style="color:red; font-size:1.5em;">*</span></label>
 
                             <div class="col-md-6">
                                 <select id="gender" type="date" class="form-control" name="genero" required>
@@ -87,7 +87,7 @@
                             <label for="telefone" class="col-md-4 control-label">Telefone-Fixo</label>
 
                             <div class="col-md-6">
-                              <input id="telefone" type="tel" class="form-control" name="celular" value="{{ old('telefone')}}" required>
+                              <input id="telefone" type="tel" class="form-control" name="celular" value="{{ old('telefone')}}">
                                 @if ($errors->has('telefone'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('telefone') }}</strong>
@@ -97,7 +97,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('celular') ? ' has-error' : '' }}">
-                            <label for="cellphone" class="col-md-4 control-label">Celular</label>
+                            <label for="cellphone" class="col-md-4 control-label">Celular <span style="color:red; font-size:1.5em;">*</span></label>
 
                             <div class="col-md-6">
                               <input id="cellphone" type="tel" class="form-control" name="celular" value="{{ old('celular')}}" required>
@@ -110,7 +110,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Senha</label>
+                            <label for="password" class="col-md-4 control-label">Senha <span style="color:red; font-size:1.5em;">*</span></label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
