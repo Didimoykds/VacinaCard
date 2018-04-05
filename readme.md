@@ -6,23 +6,20 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
-
-<h2>Preparing ambient!</h2>
+<p>O sistema ainda está em desenvolvimento e possui muitos erros, estou arrumando a medida que posso. Ainda mais depois de ter que alterar a linguagem da aplicação.</p>
+<h2>Preparando o ambiente!</h2>
 <ol>
   <li>
-    First!
-    <p>You need to have PHP 5.6~7.1 and Composer installed</p>
+    <p>Você precisa ter PHP 5.6~7.1 e Composer instalados</p>
   </li>
   <li>
-    Second!
-    <p>Do a git clone to create the project on your folder: <pre>git clone https://github.com/Didimoykds/VacinaCard.git</pre> </p>
+    <p>Faça um git clone para fazer uma cópia do projeto em sua pasta: <pre>git clone https://github.com/Didimoykds/VacinaCard.git</pre> </p>
   </li>
   <li>
-    Third!
-    <p>Do a composer install on your repository</p>
+    <p>Dê um <pre>composer install</pre> para instalar as dependências.</p>
   </li>
   <li>
-    And the lasts steps!
+    E os últimos passos!
     <ul>
       <li>php artisan key:generate</li>
       <li>php artisan migrate</li>
@@ -30,4 +27,3 @@
     </ul>
   </li>
 </ol>
-
