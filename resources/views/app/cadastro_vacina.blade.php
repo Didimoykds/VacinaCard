@@ -16,9 +16,9 @@
                             @if(isset($vaccines))
                                 @foreach($vaccines as $vaccine)
                                     <tr>
-                                        <td>{{$vaccine['name']}}</td>
-                                        <td>{{$vaccine['description']}}</td>
-                                        <td>{{$vaccine['recurrence']}}</td>
+                                        <td>{{$vaccine['nome']}}</td>
+                                        <td>{{$vaccine['descricao']}}</td>
+                                        <td>{{$vaccine['recorrencia']}}</td>
                                     </tr>
                                 @endforeach
                             @endif
@@ -34,16 +34,16 @@
                         <input type="hidden" name="user_id" value="{{Auth::user()->id}}" />
                         <div class="col-md-12">
                             <div class="col-md-6">
-                                <label for="name" class="control-label">Nome</label>
-                                <input type="text" id="name" class="form-control" name="name" required>
+                                <label for="nome" class="control-label">Nome</label>
+                                <input type="text" id="nome" class="form-control" name="nome" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="description" class="control-label">Descrição</label>
-                                <input type="text" id="description" class="form-control" name="description" required>
+                                <label for="descricao" class="control-label">Descrição</label>
+                                <input type="text" id="descricao" class="form-control" name="descricao" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="recurrence" class="control-label">Recorrência</label>
-                                <input type="text" id="recurrence" class="form-control" name="recurrence" required>
+                                <label for="recorrencia" class="control-label">Recorrência</label>
+                                <input type="text" id="recorrencia" class="form-control" name="recorrencia" required>
                             </div>
                             <div class="col-md-6 col-md-offset-3" style="margin-top:20px;">
                                 <input type="submit" class="form-control btn btn-primary" value="Cadastrar"/>

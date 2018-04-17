@@ -15,7 +15,7 @@ class SiteUpdate extends Controller
         $form = $request->input();
         if($form['form_type'] == "updateSchedule"){
             $vaccine = Schedule::find($form['id']);
-            $vaccine->update(['status' => 'concluida', 'vaccination_day' => date('Y-m-d')]);
+            $vaccine->update(['status' => 'concluida', 'diaVacina' => date('Y-m-d')]);
             return Redirect::back()->with('scheduleUpdateOrder', true);
         }
     }

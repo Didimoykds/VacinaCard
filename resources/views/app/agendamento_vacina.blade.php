@@ -18,7 +18,7 @@
                                 @foreach($scheduleCards as $scheduleCard)
                                     <tr>
                                         <td>{{$scheduleCard['dataMarcada']}}</td>
-                                        <td>{{$scheduleCard['nomeVacina']}}</td>
+                                        <td>{{$scheduleCard['nome_vacina']}}</td>
                                         <td>{{$scheduleCard['local']}}</td>
                                         <td>{{$scheduleCard['observacao']}}</td>
                                         <td>
@@ -72,8 +72,8 @@
                                 <input type="text" id="local" class="form-control" name="local" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="observation" class="control-label">Observação</label>
-                                <input type="text" id="observation" class="form-control" name="observacao" required>
+                                <label for="observacao" class="control-label">Observação</label>
+                                <input type="text" id="observacao" class="form-control" name="observacao" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="dataVacina" class="control-label">Data da Vacina</label>

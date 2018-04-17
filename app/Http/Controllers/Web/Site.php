@@ -41,12 +41,12 @@ class Site extends Controller
 
             $vacinaCards[] = [
                 'id' => $schedule['id'],
-                'vaccination_day' => $schedule['vaccination_day'],
-                'observation' => $schedule['observation'],
+                'diaVacina' => $schedule['diaVacina'],
+                'observacao' => $schedule['observacao'],
                 'local' => $schedule['local'],
-                'batch' => $schedule['batch'],
-                'vaccine_name' => $vaccine[0]['name'],
-                'recurrence' => $vaccine[0]['recurrence']
+                'lote' => $schedule['lote'],
+                'nome_vacina' => $vaccine[0]['nome'],
+                'recorrencia' => $vaccine[0]['recorrencia']
             ];
         }
         if(isset($vacinaCards)){
@@ -61,10 +61,10 @@ class Site extends Controller
 
             $scheduleCard[] = [
                 'id' => $data['id'],
-                'schedule_date' => $data['schedule_date'],
-                'vaccine_name' => $vaccine[0]['name'],
+                'dataMarcada' => $data['dataMarcada'],
+                'nome_vacina' => $vaccine[0]['nome'],
                 'local' => $data['local'],
-                'observation' => $data['observation']
+                'observacao' => $data['observacao']
             ];
         }
 
@@ -78,10 +78,10 @@ class Site extends Controller
         return Schedule::make([
             'fk_user' => $data['user_id'],
             'fk_vaccine' => $data['fk_vaccine'],
-            'vaccination_day' => $data['vaccination_day'],
+            'diaVacina' => $data['diaVacina'],
             'local' => $data['local'],
-            'batch' => $data['batch'],
-            'observation' => $data['observation'],
+            'lote' => $data['lote'],
+            'observacao' => $data['observacao'],
             'status' => "concluida"
         ]);
     }
@@ -91,9 +91,9 @@ class Site extends Controller
         return Schedule::make([
             'fk_user' => $data['user_id'],
             'fk_vaccine' => $data['fk_vaccine'],
-            'schedule_date' => $data['schedule_date'],
+            'dataMarcada' => $data['dataMarcada'],
             'local' => $data['local'],
-            'observation' => $data['observation'],
+            'observacao' => $data['observacao'],
             'status' => "nao_concluida"
         ]);
     }
@@ -101,9 +101,9 @@ class Site extends Controller
     private function createVaccine(array $data)
     {
         return Vaccine::make([
-            'name' => $data['name'],
-            'description' => $data['description'],
-            'recurrence' => $data['recurrence']
+            'nome' => $data['nome'],
+            'descricao' => $data['descricao'],
+            'recorrencia' => $data['recorrencia']
         ]);
     }
 

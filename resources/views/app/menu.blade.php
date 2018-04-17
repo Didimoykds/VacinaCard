@@ -33,7 +33,9 @@
             <ul class="nav nav-pills">
                 <li class="active"><a data-toggle="pill" href="#vacinas">Cartão de Vacina</a></li>
                 <li><a data-toggle="pill" href="#agendamento">Agendamento</a></li>
-                <li><a data-toggle="pill" href="#vacina">Cadastrar Vacina</a></li>
+                @if(Auth::user()->perfil == "administrador")
+                  <li><a data-toggle="pill" href="#vacina">Cadastrar Vacina</a></li>
+                @endif
             </ul>
         </div>
         <div class="panel panel-default" style="padding:0px">
@@ -44,9 +46,11 @@
                 <div id="agendamento" class="tab-pane fade">
                     @include('app.agendamento_vacina')
                 </div>
-                <div id="vacina" class="tab-pane fade">
-                    @include('app.cadastro_vacina')
-                </div>
+                @if(Auth::user()->perfil == "administrador")
+                  <div id="vacina" class="tab-pane fade">
+                      @include('app.cadastro_vacina')
+                  </div>
+                @endif
             </div>
         </div>
     </div>

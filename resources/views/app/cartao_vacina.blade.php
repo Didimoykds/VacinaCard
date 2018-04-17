@@ -19,12 +19,12 @@
                             @if(isset($vacinaCards))
                                 @foreach($vacinaCards as $vacinaCard)
                                     <tr>
-                                        <td>{{$vacinaCard['vaccination_day']}}</td>
-                                        <td>{{$vacinaCard['vaccine_name']}}</td>
-                                        <td>{{$vacinaCard['batch']}}</td>
+                                        <td>{{$vacinaCard['diaVacina']}}</td>
+                                        <td>{{$vacinaCard['nome_vacina']}}</td>
+                                        <td>{{$vacinaCard['lote']}}</td>
                                         <td>{{$vacinaCard['local']}}</td>
-                                        <td>{{$vacinaCard['recurrence']}}</td>
-                                        <td>{{$vacinaCard['observation']}}</td>
+                                        <td>{{$vacinaCard['recorrencia']}}</td>
+                                        <td>{{$vacinaCard['observacao']}}</td>
                                         <td>
                                             <form method="POST">
                                                 <input type="hidden" name="_method" value="DELETE" >
@@ -59,7 +59,7 @@
                                 <label for="vaccine" class="control-label">Vacina</label>
                                 <select class="form-control" id="vaccine" name="fk_vaccine">
                                     @foreach($vaccines as $vaccine)
-                                        <option value="{{$vaccine['id']}}">{{$vaccine['name']}}</option>
+                                        <option value="{{$vaccine['id']}}">{{$vaccine['nome']}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -68,16 +68,16 @@
                                 <input type="text" id="local" class="form-control" name="local" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="batch" class="control-label">Lote</label>
-                                <input type="text" id="batch" class="form-control" name="batch" required>
+                                <label for="lote" class="control-label">Lote</label>
+                                <input type="text" id="lote" class="form-control" name="lote" required>
                             </div>
                             <div class="col-md-6">
-                                <label for="observation" class="control-label">Observação</label>
-                                <input type="text" id="observation" class="form-control" name="observation" required>
+                                <label for="observacao" class="control-label">Observação</label>
+                                <input type="text" id="observacao" class="form-control" name="observacao" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="dataVacina" class="control-label">Data da Vacina</label>
-                                <input type="date" id="dataVacina" class="form-control" name="vaccination_day" required>
+                                <input type="date" id="dataVacina" class="form-control" name="diaVacina" required>
                             </div>
                             <div class="col-md-6 col-md-offset-3" style="margin-top:20px;">
                                 <input type="submit" class="form-control btn btn-primary" value="Cadastrar"/>
