@@ -20,7 +20,7 @@ class CreateSchedulesTable extends Migration {
 			$table->date('diaVacina')->nullable();
 			$table->string('lote', 45)->nullable();
 			$table->string('observacao', 45)->nullable();
-			$table->enum('status', array('concluida','nao_concluida'))->nullable();
+			$table->enum('status', array('concluida','nao_concluida'))->default('nao_concluida')->nullable();
 			$table->integer('fk_user')->index('fk_schedules_user1_idx');
 			$table->integer('fk_vaccine')->index('fk_schedules_vaccine1_idx');
 			$table->timestamps();

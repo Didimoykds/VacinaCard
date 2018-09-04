@@ -135,6 +135,9 @@
                                     <strong>MENU</strong> <i class="fa fa-plus-circle" aria-hidden="true"></i>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
+                                <li class="text-center">
+                                        <a href="#" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-envelope" aria-hidden="true"></i>  Solicitar Nova Vacina</a>
+                                    </li>
                                     <li class="text-center">
                                         <a href="{{ route('settings') }}"><i class="fa fa-cog" aria-hidden="true"></i>  Configurações</a>
                                     </li>
@@ -157,6 +160,31 @@
         </nav>
 
         @yield('content')
+    </div>
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title" id="exampleModalLongTitle">Título</h5>
+            <input type="text" placeholder="Título"/>
+        </div>
+        <div class="modal-body">
+            <h5 class="modal-title" id="exampleModalLongTitle">Descrição</h5>
+            <textarea style="width:550px;"></textarea>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="alert('Enviado com Sucesso!')">Enviar</button>
+        </div>
+        </div>
+    </div>
     </div>
     <footer id='footer' class="navbar-default">
         <br/>

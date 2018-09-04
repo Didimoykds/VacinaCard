@@ -26,6 +26,11 @@
         alert('Agendamento Completado!');
     </script>
 @endif
+@if( session('message') != null)
+    <script>
+        alert("{{session('message')}}");
+    </script>
+@endif
 
 <div class="tab-content">
     <div class="container">
