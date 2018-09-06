@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <h2 class="text-center">Cadastro de Vacinas</h2>
+        <h2 class="text-center">Agendamento de Vacinas</h2>
         <div class="panel-body">
             <div class="col-md-12" style="max-height:250px;overflow-y:scroll;">
                 <div class="row table">
@@ -79,7 +79,7 @@
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <label for="local" class="control-label">Local</label>
+                            <label for="local" class="control-label">Local<b style="color:red;">*</b></label>
                             <input type="text" id="local" class="form-control" name="schedule[local]" required>
                         </div>
                         <div class="col-md-6">
@@ -87,7 +87,7 @@
                             <input type="text" id="observacao" class="form-control" name="schedule[observacao]" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="dataVacina" class="control-label">Data da Vacina</label>
+                            <label for="dataVacina" class="control-label">Data da Vacina<b style="color:red;">*</b></label>
                             <input type="date" id="dataVacina" class="form-control" name="schedule[dataMarcada]" required>
                         </div>
                         <div class="col-md-6 col-md-offset-3" style="margin-top:20px;">

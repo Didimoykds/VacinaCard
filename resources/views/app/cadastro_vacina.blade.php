@@ -51,20 +51,18 @@
             <hr/>
             <div class="form-horizontal">
                 <form method="POST" action="{{route('create-vaccine')}}">
-                    <input type="hidden" name="_method" value="PUT">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" >
                     <div class="col-md-12">
                         <div class="col-md-6">
-                            <label for="nome" class="control-label">Nome</label>
+                            <label for="nome" class="control-label">Nome<b style="color:red;">*</b></label>
                             <input type="text" id="nome" class="form-control" name="vaccine[nome]" value="{{old('vaccine[nome]')}}" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="descricao" class="control-label">Descrição</label>
+                            <label for="descricao" class="control-label">Descrição<b style="color:red;">*</b></label>
                             <input type="text" id="descricao" class="form-control" name="vaccine[descricao]" value="{{old('vaccine[descricao]')}}" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="recorrencia" class="control-label">Recorrência</label>
+                            <label for="recorrencia" class="control-label">Recorrência<b style="color:red;">*</b></label>
                             <input type="text" id="recorrencia" class="form-control" name="vaccine[recorrencia]" value="{{old('vaccine[recorrencia]')}}" required>
                         </div>
                         <div class="col-md-6 col-md-offset-3" style="margin-top:20px;">
