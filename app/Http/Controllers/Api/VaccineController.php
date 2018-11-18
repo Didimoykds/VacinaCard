@@ -10,7 +10,6 @@ class VaccineController extends Controller
 {
     public function create(Request $request)
     {
-        return response(['message' => "OI!"], 200);
         $validator = Vaccine::validate($request->vaccine);
         if($validator->fails()){       
             return response($validator->errors(), 400);
@@ -41,4 +40,5 @@ class VaccineController extends Controller
         $vaccine->delete();
         return response(['message' =>'Vacina '.$vaccine->nome.' deletada com sucesso!'], 200);
     }
+
 }

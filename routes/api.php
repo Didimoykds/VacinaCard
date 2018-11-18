@@ -18,7 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'vaccine'], function() {
-    Route::any('/', 'Api\VaccineController@create');
-    //Route::put('/{id}', 'Api\VaccineController@update');
-    //Route::delete('/{id}', 'Api\VaccineController@delete');
+    Route::post('/', 'Api\VaccineController@create');
+    Route::put('/{id}', 'Api\VaccineController@update');
+    Route::delete('/{id}', 'Api\VaccineController@delete');
+});
+
+Route::get('/teste', function () {
+    return response(['message' => "OI!"], 200);
 });
