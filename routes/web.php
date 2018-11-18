@@ -56,12 +56,3 @@ Route::group(['middleware'=>'auth', 'prefix' => 'user'], function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-
-
-
-
-
-//
