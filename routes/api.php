@@ -18,6 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'vaccine'], function() {
+    Route::get('/', function(){ 
+        return response(['message' => 'oi'], 200); 
+    });
     Route::post('/', 'Api\VaccineController@create');
     Route::put('/{id}', 'Api\VaccineController@update');
     Route::delete('/{id}', 'Api\VaccineController@delete');

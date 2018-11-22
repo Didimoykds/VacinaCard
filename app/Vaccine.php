@@ -17,7 +17,7 @@ class Vaccine extends Model
         return Validator::make($data, [
           'nome' => 'required|string|max:45',
           'descricao' => 'string|max:100',
-          'recorrencia' => 'required|string|max:10'
+          'recorrencia' => 'required|string|max:20'
         ]);
     }
 
